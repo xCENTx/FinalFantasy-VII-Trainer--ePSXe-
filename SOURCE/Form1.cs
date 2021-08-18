@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
-using ItemHelper;
+using System.Drawing;
 using MateriaHelper;
 using SlotHelper;
+using ItemHelper;
+using System;
 using Memory;
 
 //SUMMARY
@@ -34,7 +29,8 @@ namespace FinalFantasy7_Tutorial
         Dictionary<string, string> c1Data = new Dictionary<string, string>();
         Dictionary<string, string> c2Data = new Dictionary<string, string>();
         Dictionary<string, string> c3Data = new Dictionary<string, string>();
-
+        
+        //Could use some comments
         #region COMBO BOX DATA
 
         #region ITEMS
@@ -88,6 +84,7 @@ namespace FinalFantasy7_Tutorial
 
         #endregion
 
+        //Could use some comments
         #region MAIN FORM
         public Main()
         {
@@ -166,6 +163,7 @@ namespace FinalFantasy7_Tutorial
 
         #endregion
 
+        //Completed , could use some comments
         #region GENERAL
 
         private void GENERAL()
@@ -258,6 +256,7 @@ namespace FinalFantasy7_Tutorial
 
         #endregion
 
+        //Completed , could use some comments
         #region ITEMS
         private void SendItem_button_Click(object sender, EventArgs e)
         {
@@ -373,6 +372,7 @@ namespace FinalFantasy7_Tutorial
         }
         #endregion
 
+        //This is still empty
         #region MATERIA
 
         private void SendMateria_button_Click(object sender, EventArgs e)
@@ -382,6 +382,7 @@ namespace FinalFantasy7_Tutorial
 
         #endregion
 
+        //Nothing done with this quite yet
         #region CHARACTERS
 
         #endregion
@@ -741,18 +742,32 @@ namespace FinalFantasy7_Tutorial
                 return;
             }
 
+            //Determine if the checkbox is checked
             if (FreezeXP_checkBox.Checked)
             {
+                // determine if we have already frozen the value
+                // Also make sure text box is not empty
                 if ((!AwardXP) && (AwardXP_textBox.Text != ""))
                 {
+                    //Define our variable
                     var value = AwardXP_textBox.Text;
+
+                    //Freeze the value
                     m.FreezeValue(gData.AWARDSCREEN.XP, "int", value.ToString());
+                    
+                    //Trigger our boolean so we don't continue this thread
                     AwardXP = true;
                 }
             }
+            //If Checkbox is not checked AND we have activated our cheat
+            // Basically this is what will happen when we uncheck the box , but we only want this event to transpire when we are done freezing our memory
+            // is true , then continue
             else if (AwardXP)
             {
+                //Unfreeze the value
                 m.UnfreezeValue(gData.AWARDSCREEN.XP);
+                
+                //Trigger our boolean to be false
                 AwardXP = false;
             }
         }
@@ -764,18 +779,32 @@ namespace FinalFantasy7_Tutorial
                 return;
             }
 
+            //Determine if the checkbox is checked
             if (FreezeAP_checkBox.Checked)
             {
+                // determine if we have already frozen the value
+                // Also make sure text box is not empty
                 if ((!AwardAP) && (AwardAP_textBox.Text != ""))
                 {
+                    //Define our variable
                     var value = AwardAP_textBox.Text;
+
+                    //Freeze the value
                     m.FreezeValue(gData.AWARDSCREEN.AP, "int", value.ToString());
+
+                    //Trigger our boolean so we don't continue this thread
                     AwardAP = true;
                 }
             }
+            //If Checkbox is not checked AND we have activated our cheat
+            // Basically this is what will happen when we uncheck the box , but we only want this event to transpire when we are done freezing our memory
+            // is true , then continue
             else if (AwardAP)
             {
+                //Unfreeze the value
                 m.UnfreezeValue(gData.AWARDSCREEN.AP);
+
+                //Trigger our boolean to be false
                 AwardAP = false;
             }
         }
@@ -787,18 +816,31 @@ namespace FinalFantasy7_Tutorial
                 return;
             }
 
+            //Determine if the checkbox is checked
             if (FreezeGIL_checkBox.Checked)
             {
+                // determine if we have already frozen the value
+                // Also make sure text box is not empty
                 if ((!AwardGIL) && (AwardGIL_textBox.Text != ""))
                 {
+                    //Define our variable
                     var value = AwardGIL_textBox.Text;
+
+                    //Freeze the value
                     m.FreezeValue(gData.AWARDSCREEN.GIL, "int", value.ToString());
+                    
+                    //Trigger our boolean so we dont repeat this again and again
                     AwardGIL = true;
                 }
             }
+            //If Checkbox is not checked AND we have activated our cheat
+            // Basically this is what will happen when we uncheck the box , but we only want this event to transpire when we are done freezing our memory
+            // is true , then continue
             else if (AwardGIL)
             {
                 m.UnfreezeValue(gData.AWARDSCREEN.GIL);
+
+                //Trigger our boolean to be false
                 AwardGIL = false;
             }
         }
