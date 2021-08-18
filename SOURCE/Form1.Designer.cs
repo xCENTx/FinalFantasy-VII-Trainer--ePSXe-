@@ -177,7 +177,7 @@ namespace FinalFantasy7_Tutorial
             this.panel1.Controls.Add(this.StartMenu_Checkbox);
             this.panel1.Controls.Add(this.SendGil_Button);
             this.panel1.Controls.Add(this.GIL_TextBox);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(11, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 111);
             this.panel1.TabIndex = 6;
@@ -227,7 +227,7 @@ namespace FinalFantasy7_Tutorial
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(49, -1);
+            this.label2.Location = new System.Drawing.Point(22, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 6;
@@ -455,7 +455,7 @@ namespace FinalFantasy7_Tutorial
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.panel4);
-            this.panel5.Location = new System.Drawing.Point(11, 265);
+            this.panel5.Location = new System.Drawing.Point(11, 140);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(437, 120);
             this.panel5.TabIndex = 12;
@@ -465,7 +465,7 @@ namespace FinalFantasy7_Tutorial
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(158, 253);
+            this.label8.Location = new System.Drawing.Point(158, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(145, 19);
             this.label8.TabIndex = 17;
@@ -476,7 +476,7 @@ namespace FinalFantasy7_Tutorial
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(248, 3);
+            this.label9.Location = new System.Drawing.Point(223, 8);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(141, 19);
             this.label9.TabIndex = 10;
@@ -496,7 +496,7 @@ namespace FinalFantasy7_Tutorial
             this.panel6.Controls.Add(this.AwardXP_textBox);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.AwardGIL_textBox);
-            this.panel6.Location = new System.Drawing.Point(239, 16);
+            this.panel6.Location = new System.Drawing.Point(214, 21);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(209, 95);
             this.panel6.TabIndex = 11;
@@ -620,7 +620,7 @@ namespace FinalFantasy7_Tutorial
             this.ProcessIndicator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ProcessIndicator.Location = new System.Drawing.Point(0, 377);
             this.ProcessIndicator.Name = "ProcessIndicator";
-            this.ProcessIndicator.Size = new System.Drawing.Size(667, 15);
+            this.ProcessIndicator.Size = new System.Drawing.Size(669, 15);
             this.ProcessIndicator.TabIndex = 18;
             // 
             // label11
@@ -628,7 +628,7 @@ namespace FinalFantasy7_Tutorial
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(91, 130);
+            this.label11.Location = new System.Drawing.Point(71, 266);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 19);
             this.label11.TabIndex = 10;
@@ -641,14 +641,17 @@ namespace FinalFantasy7_Tutorial
             this.panel7.Controls.Add(this.ItemQty_textBox);
             this.panel7.Controls.Add(this.ItemSlot_comboBox);
             this.panel7.Controls.Add(this.ItemType_comboBox);
-            this.panel7.Location = new System.Drawing.Point(77, 143);
+            this.panel7.Location = new System.Drawing.Point(61, 279);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(334, 37);
             this.panel7.TabIndex = 11;
             // 
             // ItemType_comboBox
             // 
+            this.ItemType_comboBox.DropDownHeight = 75;
             this.ItemType_comboBox.FormattingEnabled = true;
+            this.ItemType_comboBox.IntegralHeight = false;
+            this.ItemType_comboBox.ItemHeight = 13;
             this.ItemType_comboBox.Location = new System.Drawing.Point(93, 8);
             this.ItemType_comboBox.Name = "ItemType_comboBox";
             this.ItemType_comboBox.Size = new System.Drawing.Size(121, 21);
@@ -657,7 +660,9 @@ namespace FinalFantasy7_Tutorial
             // 
             // ItemSlot_comboBox
             // 
+            this.ItemSlot_comboBox.DropDownHeight = 75;
             this.ItemSlot_comboBox.FormattingEnabled = true;
+            this.ItemSlot_comboBox.IntegralHeight = false;
             this.ItemSlot_comboBox.Location = new System.Drawing.Point(7, 8);
             this.ItemSlot_comboBox.Name = "ItemSlot_comboBox";
             this.ItemSlot_comboBox.Size = new System.Drawing.Size(77, 21);
@@ -689,7 +694,7 @@ namespace FinalFantasy7_Tutorial
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(87, 190);
+            this.label15.Location = new System.Drawing.Point(71, 322);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(80, 19);
             this.label15.TabIndex = 25;
@@ -702,7 +707,7 @@ namespace FinalFantasy7_Tutorial
             this.panel8.Controls.Add(this.SendMateria_button);
             this.panel8.Controls.Add(this.MateriaSlot_comboBox);
             this.panel8.Controls.Add(this.MateriaType_comboBox);
-            this.panel8.Location = new System.Drawing.Point(76, 203);
+            this.panel8.Location = new System.Drawing.Point(60, 335);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(334, 37);
             this.panel8.TabIndex = 26;
@@ -769,7 +774,7 @@ namespace FinalFantasy7_Tutorial
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(667, 392);
+            this.ClientSize = new System.Drawing.Size(669, 392);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.label15);

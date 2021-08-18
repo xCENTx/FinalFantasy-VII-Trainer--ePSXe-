@@ -256,7 +256,6 @@ namespace FinalFantasy7_Tutorial
 
         #endregion
 
-        //Completed , could use some comments
         #region ITEMS
         private void SendItem_button_Click(object sender, EventArgs e)
         {
@@ -265,20 +264,31 @@ namespace FinalFantasy7_Tutorial
                 return;
             }
 
+            //Determine if a quantity has been entered , if not we will ignore the button click
             if (ItemQty_textBox.Text != "")
             {
+                // Define the address where will be writing the item data to
                 string SLOT_ADDRESS = ItemSlot_comboBox.SelectedValue.ToString();
 
+                // Determine which slot has been selected
                 if (SLOT_ADDRESS == gData.ITEMS.SLOT1)
                 {
+                    //Define the Qty Address
                     var QTY_ADDRESS = gData.ITEMS.SLOT1_QTY;
+
+                    //Define the selected item
                     var ITEM = ItemType_comboBox.SelectedValue;
+
+                    //Convert and multiply the desired Quantity
                     var QTY = Convert.ToInt32(ItemQty_textBox.Text);
                     var VALUE = QTY * 2;
+
+                    //Write the data
                     m.WriteMemory(SLOT_ADDRESS.ToString(), "Byte", ITEM.ToString());
                     m.WriteMemory(QTY_ADDRESS.ToString(), "Byte", VALUE.ToString("X"));
                 }
 
+                #region SLOTS 2 - 10
                 if (SLOT_ADDRESS == gData.ITEMS.SLOT2)
                 {
                     var QTY_ADDRESS = gData.ITEMS.SLOT2_QTY;
@@ -368,6 +378,8 @@ namespace FinalFantasy7_Tutorial
                     m.WriteMemory(SLOT_ADDRESS.ToString(), "Byte", ITEM.ToString());
                     m.WriteMemory(QTY_ADDRESS.ToString(), "Byte", VALUE.ToString("X"));
                 }
+                #endregion
+
             }
         }
         #endregion
